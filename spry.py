@@ -353,6 +353,9 @@ choice = st.sidebar.selectbox("Menu", menu)
 video_url = st.text_input("Video URL")
 button = st.button("RUN")
 if button:
+    dir = 'data'
+    for f in os.listdir(dir):
+        os.remove(os.path.join(dir, f))
     r = requests.get(video_url, allow_redirects=True)
     filename = "test.webm"
     open('test.webm', 'wb').write(r.content)
