@@ -1,3 +1,4 @@
 mediapipe
 matplotlib
 tqdm
+opencv-python
